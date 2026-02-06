@@ -15,12 +15,18 @@ This repo contains the Draw.io skill assets used by AI agents to create and edit
 
 ```json
 {
-  "mcpServers": {
-    "drawio": {
-      "command": "npx",
-      "args": ["-y", "drawio-mcp-server"]
-    }
-  }
+	"servers": {
+		"drawio": {
+			"command": "npx",
+			"args": [
+				"@next-ai-drawio/mcp-server@latest"
+			],
+			"env": {
+				"PORT": "6010"
+			}
+		}
+	},
+	"inputs": []
 }
 ```
 
