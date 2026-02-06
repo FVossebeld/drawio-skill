@@ -4,7 +4,7 @@ This repo contains the Draw.io skill assets used by AI agents to create and edit
 
 ## Prerequisites
 
-- Draw.io MCP server (install from [lgazo/drawio-mcp-server](https://github.com/lgazo/drawio-mcp-server))
+- Draw.io MCP server (install from [[lgazo/drawio-mcp-server](https://github.com/lgazo/drawio-mcp-server](https://github.com/DayuanJiang/next-ai-draw-io/tree/main)))
 - Draw.io MCP Browser Extension (see the upstream repo for install + port configuration)
 - An MCP client that can call tools (for example, Claude Desktop, Codex, or Zed)
 - Draw.io (web or desktop) accessible on the same machine
