@@ -97,9 +97,7 @@ Edit `~/.copilot/mcp-config.json` (note: uses `mcpServers` instead of `servers`)
    }
    ```
 
-2. **Open Draw.io** in your browser ([app.diagrams.net](https://app.diagrams.net)).
-
-3. **Run your MCP client** and start describing the diagram you want.
+2. **Run your MCP client** and start describing the diagram you want.
 
 ---
 
