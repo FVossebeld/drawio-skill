@@ -8,6 +8,76 @@ This repo contains the skill assets used by AI agents to produce professional ar
 
 ---
 
+## Using with GitHub Copilot
+
+### 1. Add the skill to your repository
+
+Copy the files from this repo into a skill folder in your project:
+
+```
+your-repo/
+└── .github/
+    └── skills/
+        └── drawio/
+            ├── SKILL.md
+            ├── checklist.md
+            ├── examples.md
+            ├── reference.md
+            └── azure-icons.md
+```
+
+GitHub Copilot automatically discovers skills in `.github/skills/` and loads the right one based on the task description in `SKILL.md`.
+
+### 2. Configure the MCP server
+
+**VS Code — workspace (recommended, checked into source control):**
+
+Create `.vscode/mcp.json` in your project:
+
+```json
+{
+  "servers": {
+    "drawio": {
+      "command": "npx",
+      "args": ["@next-ai-drawio/mcp-server@latest"],
+      "env": {
+        "PORT": "6010"
+      }
+    }
+  }
+}
+```
+
+**VS Code — user-level (applies to all projects):**
+
+Edit the global `mcp.json` for your platform:
+
+| OS | Path |
+|----|------|
+| Windows | `%APPDATA%\Code\User\mcp.json` |
+| macOS | `~/Library/Application Support/Code/User/mcp.json` |
+| Linux | `~/.config/Code/User/mcp.json` |
+
+**GitHub Copilot CLI — user-level:**
+
+Edit `~/.copilot/mcp-config.json` (note: uses `mcpServers` instead of `servers`):
+
+```json
+{
+  "mcpServers": {
+    "drawio": {
+      "command": "npx",
+      "args": ["@next-ai-drawio/mcp-server@latest"],
+      "env": {
+        "PORT": "6010"
+      }
+    }
+  }
+}
+```
+
+---
+
 ## Quick Start
 
 1. **Install and configure the MCP server** in your MCP client (e.g. VS Code, Claude Desktop):
